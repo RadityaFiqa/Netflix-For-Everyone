@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const readline = require('readline-sync');
 const CronJob = require('cron').CronJob;
 
-async function run() {
+(async function run() {
     const sgbcode = await readline.question('SGB CODE : ')
     const browser = await puppeteer.launch({
         headless: false,
@@ -23,6 +23,4 @@ async function run() {
     } else {
         console.log('SGB CODE INVALID / Server Penuh Ndan')
     }
-}
-
-run()
+})();
